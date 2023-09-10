@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // câu 1
+        var dolphins = [96, 108, 89];
+        var sumdolphins = dolphins.reduce((partialSum, a) => partialSum + a, 0)
+        var avgdolphins = sumdolphins / dolphins.length;
+        console.log('Điểm trung bình đội Dolphins:', avgdolphins.toFixed(2));
+
+        var koalas = [88, 91, 110];
+        var sumkoalas = koalas.reduce((partialSum, a) => partialSum + a, 0)
+        var avgkoalas = sumkoalas / koalas.length;
+        console.log('Điểm trung bình đội KoaLas:', avgkoalas.toFixed(2));
+
+        // Câu 2
+        if (avgdolphins > avgkoalas){
+            difference = avgdolphins - avgkoalas;
+            console.log('đội Dolphins win đội Koalas với số điểm:',avgdolphins.toFixed(2), 'điểm lớn hơn đội Koalas:', difference.toFixed(2), 'điểm');
+        }else if (avgdolphins < avgkoalas){
+            difference1 = avgkoalas - avgdolphins;
+            console.log('đội Koalas win đội Dolphins với số điểm:',avgkoalas.toFixed(2), 'điểm lớn hơn đội Koalas:', difference1.toFixed(2), 'điểm');
+        }else if (avgdolphins = avgkoalas){
+            console.log('Hai đội hòa');
+        }
+         
+        // câu 3 
+        var dolphinsBonus1 = [97, 112, 101] 
+        var sumdolphins1 = dolphinsBonus1.reduce((partialSum, a) => partialSum + a, 0)
+        var avgdolphins1 = sumdolphins1 / dolphinsBonus1.length;
+        console.log('Điểm trung bình đội Dolphins lần 1:', avgdolphins1.toFixed(2));
+
+        var koalasBonus1 = [109,95,123]
+        var sumkoalas1 = koalasBonus1.reduce((partialSum, a) => partialSum + a, 0)
+        var avgkoalas1 = sumkoalas1 / koalas.length;
+        console.log('Điểm trung bình đội KoaLas lần 1:', avgkoalas1.toFixed(2));
+
+        if (avgdolphins1 > avgkoalas1 && avgdolphins1 > 100){
+            console.log('Đội Dolphins dành được phần thưởng');
+        }else if (avgdolphins1 < avgkoalas1 && avgkoalas1 > 100){
+            
+            console.log('ĐỘi Koalas dành được phần thưởng');
+        }else{
+            console.log('Không đội nào được thưởng');
+        }
+
+        // câu 4
+        var dolphinsBonus2 = [97, 112, 101] 
+        var sumdolphins2 = dolphinsBonus2.reduce((partialSum, a) => partialSum + a, 0)
+        var avgdolphins2 = sumdolphins2 / dolphinsBonus1.length;
+        console.log('Điểm trung bình đội Dolphins lần 2:', avgdolphins2.toFixed(2));
+
+        var koalasBonus2 = [109,95,106]
+        var sumkoalas2 = koalasBonus2.reduce((partialSum, a) => partialSum + a, 0)
+        var avgkoalas2 = sumkoalas2 / koalas.length;
+        console.log('Điểm trung bình đội KoaLas lần 2:', avgkoalas2.toFixed(2));
+
+        if (avgdolphins2 > avgkoalas2 && avgdolphins2 > 100){
+            console.log('Đội Dolphins dành được phần thưởng');
+        }else if (avgdolphins2 < avgkoalas2 && avgkoalas2 > 100){
+            
+            console.log('ĐỘi Koalas dành được phần thưởng');
+        }else{
+            console.log('Cả hai cùng được thưởng');
+        }
+
+
+    </script> 
+</body>
+</html>

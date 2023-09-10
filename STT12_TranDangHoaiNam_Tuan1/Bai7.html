@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Mark = {
+            fullName: 'Mark Miller',
+            mass: 78,
+            height: 1.69,
+            
+        }
+       var John = {
+            fullName: "John Smith",
+            mass: 92,
+            height: 1.95,
+       }
+       var calcBMI = function(mass, height){
+            BMI = mass / (height * height);
+            return BMI;
+       }
+
+       var bmiMark = calcBMI(Mark.mass, Mark.height);
+        var bmiJohn = calcBMI(John.mass, John.height);
+        
+        console.log(bmiMark.toFixed(2));
+        console.log(bmiJohn.toFixed(2));
+
+        if(bmiMark > bmiJohn){
+            console.log(Mark.fullName +" " + bmiMark.toFixed(2)+ " có chỉ số BMI cao hơn của " + John.fullName + " " + bmiJohn.toFixed(2) );
+        }else if (bmiJohn > bmiMark) {
+         console.log(John.fullName + " có chỉ số BMI cao hơn của " + Mark.fullName);
+        } else {
+         console.log("Chỉ số BMI của " + Mark.fullName + " và " + John.fullName + " bằng nhau ");
+        }
+
+    </script>
+</body>
+</html>

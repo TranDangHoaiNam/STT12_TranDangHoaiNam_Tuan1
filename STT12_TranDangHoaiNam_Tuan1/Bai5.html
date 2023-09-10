@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var calcAverage = function(a,b,c){
+           return (a+b+c)/3
+        }
+        
+        var agvdolphins1 = calcAverage(4,23,71);
+        var agvKoalas1 = calcAverage(65,54,49);
+        var agvdolphins2 = calcAverage(85,54,41);
+        var agvKoalas2 = calcAverage (23,34,27)
+        console.log(agvdolphins1.toFixed(2));
+        console.log(agvKoalas1);
+        console.log(agvdolphins2);
+        console.log(agvKoalas2);
+
+       var win = function(agvdolphins, agvKoalas){
+        if (agvdolphins >= 2 * agvKoalas) {
+                return `Cá heo thắng (${agvdolphins} vs. ${agvKoalas})`;
+           } else if (agvKoalas >= 2 * agvdolphins) {
+                return `Gấu túi thắng (${agvKoalas} vs. ${agvdolphins})`;
+           } else {
+                return "Không có đội nào thắng";
+        }
+       }
+       var Checkwwinner1 = win(agvdolphins1, agvKoalas1);
+       var Checkwwinner2 = win(agvdolphins2, agvKoalas2);
+       console.log(Checkwwinner1);
+       console.log(Checkwwinner2);
+    </script>
+</body>
+</html>
